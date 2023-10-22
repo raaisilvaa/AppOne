@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
         btSend.setOnClickListener {
             val email = etEmail.text.toString()
 
-
             // is blank verifica se o campo foi digitado corretamente
             if(email.isBlank()) {
                 etEmail.error = "Digite seu e-mail"
