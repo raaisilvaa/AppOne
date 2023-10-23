@@ -3,7 +3,9 @@ package com.raaisilvaa.appone
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
+import android.widget.Button
 import android.widget.TextView
+import org.w3c.dom.Text
 
 class Projeto_2_Sozinho : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
