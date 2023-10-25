@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Patterns
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import org.w3c.dom.Text
 
 class Projeto_2_Sozinho : AppCompatActivity() {
@@ -47,15 +48,25 @@ class Projeto_2_Sozinho : AppCompatActivity() {
             } else {
                 textResultPhone.text = numPhone.text.toString()
             }
-        }
 
-        // Botão clicável e com funcão de limpar todos os campos
+            // Animação na tela após certo comportamento
+            // THIS: ele referencia a Activy que está sendo trabalhada
+            // LENGTH SHORT: feedback mais curto
+            // LENGTH LONG: feedback mais longo
+
+            Toast.makeText(this, "Atualizado com sucesso!", Toast.LENGTH_SHORT).show() }
+
+       // Botão clicável e com funcão de limpar todos os campos
         btLimpar.setOnClickListener {
             textResult.text = ""
             textResultPhone.text = ""
             textEmail.text = null
             numPhone.text = null
         }
+
+        // TODO: Implement Toast
+
+        // TODO: Implement Snackbar
 
 
 
