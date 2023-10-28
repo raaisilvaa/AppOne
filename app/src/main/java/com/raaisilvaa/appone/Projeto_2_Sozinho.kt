@@ -22,7 +22,7 @@ class Projeto_2_Sozinho : AppCompatActivity() {
         val btEnviar = findViewById<Button>(R.id.btEnviar)
         val btLimpar = findViewById<Button>(R.id.btLimpar)
 
-        // Bot!ao clicável
+        // Botão clicável
         btEnviar.setOnClickListener {
             // Puxando váriaveis de fora da chave para dentro
             val toEmail = textEmail.text.toString()
@@ -52,8 +52,8 @@ class Projeto_2_Sozinho : AppCompatActivity() {
 
         // Botão clicável e com funcão de limpar todos os campos
         btLimpar.setOnClickListener {
-            val oldText = textResult.text
-            val oldPhone = textResultPhone.text
+        val oldText = textResult.text
+        val oldPhone = textResultPhone.text
 
             textResult.text = null
             textResultPhone.text = null
@@ -78,4 +78,4 @@ class Projeto_2_Sozinho : AppCompatActivity() {
 
         }
 
-    }
+        }

@@ -1,11 +1,13 @@
 package com.raaisilvaa.appone
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import org.w3c.dom.Text
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,10 +19,100 @@ class MainActivity : AppCompatActivity() {
         val exibirPhone = findViewById<TextView>(R.id.exibirPhone)
         val etEmail = findViewById<TextView>(R.id.etEmail)
         val digitePhone = findViewById<TextView>(R.id.digitePhone)
-        val btSend = findViewById<TextView>(R.id.btSend)
-        val btClear = findViewById<TextView>(R.id.btClear)
+        val btSend = findViewById<Button>(R.id.btSend)
+        val btClear = findViewById<Button>(R.id.btClear)
 
-        // Botão clicável de ação e condições
+        btSend.setOnClickListener {
+            val email = etEmail.text.toString()
+            val telefone = digitePhone.text.toString()
+
+            fun isValidPhoneNumber(phoneNumber: String): Boolean {
+                val pattern = Regex("^[0-9]{11,}\$")
+                return pattern.matches(phoneNumber)
+            }
+
+            if (email.isBlank()) {
+                etEmail.error = "Digite seu e-mail!"
+            } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                etEmail.error = "E-mail inválido!"
+            } else if (telefone.isBlank()) {
+                digitePhone.error = "Digite seu número!"
+            } else if (!isValidPhoneNumber(telefone)) {
+                digitePhone.error = "Número inválido!"
+            } else {
+                tvResult.text = etEmail.text.toString()
+                exibirPhone.text = digitePhone.text.toString()
+                // Animação quando clicado no botão enviar.
+                Toast.makeText(this, "Atualizado com sucesso!", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        btClear.setOnClickListener {
+            val oldText = tvResult.text
+            val oldPhone = exibirPhone.text
+
+            tvResult.text = null
+            exibirPhone.text = null
+            etEmail.text = null
+            digitePhone.text = null
+
+            val constraintLayout = findViewById<View>(R.id.constraintLayout)
+            Snackbar.make(constraintLayout, "Apagado com sucesso!", Snackbar.LENGTH_INDEFINITE)
+                .setAction("Desfazer") {
+                    // Verifique se esta parte do código é executado
+
+                    tvResult.text = oldText
+                    exibirPhone.text = oldPhone
+                    etEmail.text = oldText
+                    digitePhone.text = oldPhone
+
+                    // Código caso a restauração tenha dado certo exibir uma mensagem para o usuário
+                    Toast.makeText(this, "Restaurado com sucesso!", Toast.LENGTH_SHORT).show()
+                }
+                .show()
+        }
+
+
+    }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+// Botão clicável de ação e condições
         btSend.setOnClickListener {
             val email = etEmail.text.toString()
             val telefone = digitePhone.text.toString()
@@ -53,7 +145,4 @@ class MainActivity : AppCompatActivity() {
             etEmail.text = null
             digitePhone.text = null
         }
-
-
-    }
-}
+ */
