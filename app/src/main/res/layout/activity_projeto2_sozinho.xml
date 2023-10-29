@@ -7,6 +7,20 @@
     android:layout_height="match_parent"
     tools:context=".Projeto_2_Sozinho">
 
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="360dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo"
+        android:contentDescription="@string/todoo"
+        tools:ignore="ContentDescription" />
+
     <TextView
         android:id="@+id/textResult"
         android:layout_width="wrap_content"
@@ -16,7 +30,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
         tools:text="Email" />
 
     <TextView
@@ -37,12 +51,14 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Digite seu e-mail"
+        android:hint="@string/digite_seu_e_mail"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textResultPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/textResultPhone"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/numPhone"
@@ -51,9 +67,12 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Digite seu número de telefone"
+        android:hint="@string/digite_seu_n_mero_de_telefone"
         android:inputType="phone"
+        android:minHeight="48dp"
+        android:textColorHint="#A1887F"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textEmail" />
@@ -64,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Enviar"
+        android:text="@string/Enviar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numPhone" />
@@ -77,9 +96,11 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="#D2F44336"
-        android:text="Limpar"
+        android:text="@string/Limpar"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btEnviar" />
+        app:layout_constraintTop_toBottomOf="@+id/btEnviar"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

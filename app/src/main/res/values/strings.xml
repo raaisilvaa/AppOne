@@ -1,7 +1,14 @@
 <resources>
     <string name="app_name">AppOne</string>
-    <string name="todo">TODO</string>
-    <string name="limpar">Limpar</string>
-    <string name="insira_seu_e_mail">Insira seu e-mail</string>
-    <string name="enviar">Enviar</string>
+    <string name="todo" translatable="false">TODO</string>
+    <string name="limpar" translatable="false">Limpar</string>
+    <string name="insira_seu_e_mail" translatable="false">Insira seu e-mail</string>
+    <string name="enviar" translatable="false">Enviar</string>
+    <string name="Enviar" translatable="false">Enviar</string>
+    <string name="Limpar" translatable="false">Limpar</string>
+    <string name="digite_seu_e_mail" translatable="false">Digite seu e-mail</string>
+    <string name="digite_seu_n_mero_de_telefone" translatable="false">Digite seu número de telefone</string>
+    <string name="atualizado_com_sucesso" translatable="false">Atualizado com sucesso!</string>
+    <string name="nome_completo">Nome completo</string>
+    <string name="todoo">TODO</string>
 </resources>

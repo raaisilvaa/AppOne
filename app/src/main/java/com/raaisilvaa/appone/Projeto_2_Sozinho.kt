@@ -1,14 +1,13 @@
 package com.raaisilvaa.appone
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
-import org.w3c.dom.Text
 
 class Projeto_2_Sozinho : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,10 +67,8 @@ class Projeto_2_Sozinho : AppCompatActivity() {
                     textResultPhone.text = oldPhone
                     numPhone.text = oldPhone
 
-
                     Toast.makeText(this, "Desfeito com sucesso!", Toast.LENGTH_SHORT).show()
                 }
-
                 .show()
         }
 
