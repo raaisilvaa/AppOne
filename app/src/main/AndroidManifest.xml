@@ -13,6 +13,18 @@
         android:theme="@style/Theme.AppOne"
         tools:targetApi="31">
         <activity
+            android:name=".Aprendendo_Java"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity2"
+            android:exported="true" />
+        <activity
             android:name=".Projeto_2_Sozinho"
             android:exported="true">
             <intent-filter>

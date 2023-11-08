@@ -34,49 +34,50 @@ class MainActivity : AppCompatActivity() {
             if (nomeCompleto.isBlank()) {
                 etNome.error = "Digite seu nome!"
             } else if (!nomeCompleto.contains(" ")) {
-                etNome.error = "Nome incomleto!"
+                etNome.error = "Nome inválido!"
             } else {
                 tvNome.text = etNome.text.toString()
             }
 
             if (emailCompleto.isBlank()) {
-                etEmail.error = "Digite seu e-mail"
+                etEmail.error = "Digite seu e-mail!"
             } else if (!Patterns.EMAIL_ADDRESS.matcher(emailCompleto).matches()) {
                 etEmail.error = "E-mail inválido!"
             } else {
-                tvNome.text = etNome.text.toString()
                 tvEmail.text = etEmail.text.toString()
 
-                Toast.makeText(this,"Atualizado com sucesso!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Atualizado com sucesso!", Toast.LENGTH_SHORT).show()
             }
-
-            btClear.setOnClickListener {
-                val oldNome = tvNome.text
-                val oldEmail = tvEmail.text
-                val oldNome1 = etNome.text
-                val oldEmail1 = etEmail.text
-
-                tvNome.text = null
-                tvEmail.text = null
-                etNome.text = null
-                etEmail.text = null
-
-                val constraintLayout = findViewById<View>(R.id.constraintLayout)
-
-                Snackbar.make(constraintLayout, "Limpado com sucesso!", Snackbar.LENGTH_INDEFINITE)
-                    .setAction("Desfazer") {
-                        tvNome.text = oldNome
-                        tvEmail.text = oldEmail
-                        etNome.text = oldNome1
-                        etEmail.text = oldEmail1
-
-                        Toast.makeText(this, "Desfeito com sucesso!", Toast.LENGTH_SHORT).show()
-                    }
-
-                    .show()
-            }
-
 
         }
+
+        btClear.setOnClickListener {
+            val oldNome = tvNome.text
+            val oldEmail = tvEmail.text
+            val oldNome1 = etNome.text
+            val oldEmail1 = etEmail.text
+
+            tvNome.text = null
+            tvEmail.text = null
+            etNome.text = null
+            etEmail.text = null
+
+            val constraintLayout = findViewById<View>(R.id.constraintLayout)
+
+            Snackbar.make(constraintLayout, "Limpado com sucesso!", Snackbar.LENGTH_INDEFINITE)
+                .setAction("Desfazer") {
+                    tvNome.text = oldNome
+                    tvEmail.text = oldEmail
+                    etNome.text = oldNome1
+                    etEmail.text = oldEmail1
+
+
+
+                    Toast.makeText(this, "Desfeito com sucesso!", Toast.LENGTH_SHORT).show()
+                }
+                .show()
+        }
+
+
     }
 }
