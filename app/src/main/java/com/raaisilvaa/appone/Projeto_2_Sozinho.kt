@@ -51,8 +51,8 @@ class Projeto_2_Sozinho : AppCompatActivity() {
 
         // Botão clicável e com funcão de limpar todos os campos
         btLimpar.setOnClickListener {
-        val oldText = textResult.text
-        val oldPhone = textResultPhone.text
+            val oldText = textResult.text
+            val oldPhone = textResultPhone.text
 
             textResult.text = null
             textResultPhone.text = null
@@ -71,7 +71,6 @@ class Projeto_2_Sozinho : AppCompatActivity() {
                 }
                 .show()
         }
-
 
         }
 
