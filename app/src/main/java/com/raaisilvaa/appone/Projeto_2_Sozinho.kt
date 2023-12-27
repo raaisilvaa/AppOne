@@ -1,5 +1,6 @@
 package com.raaisilvaa.appone
 
+import android.os.Build
 import android.os.Bundle
 import android.util.Patterns
 import android.view.View
@@ -10,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 
 class Projeto_2_Sozinho : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+    public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_projeto2_sozinho)
 
