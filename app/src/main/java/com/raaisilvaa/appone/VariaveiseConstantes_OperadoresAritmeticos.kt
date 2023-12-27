@@ -23,8 +23,8 @@ var restoDivisao = 10 % 3 // 1
 
 // Convertendo número para inteiro.
 fun main() {
-    val peso: Int = 83
-    val altura: Double = 1.83
+    val peso = 83
+    val altura = 1.83
 
     val resultado = peso / altura
 
