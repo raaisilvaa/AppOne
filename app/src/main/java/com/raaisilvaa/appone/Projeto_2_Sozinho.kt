@@ -32,7 +32,7 @@ class Projeto_2_Sozinho : AppCompatActivity() {
                 val pattern = Regex("^[0-9]{11,}\$")
                 return pattern.matches(phoneNumber)
             }
-
+            /*
             // Condições de validação de e-mail
             if (toEmail.isBlank()) {
                 textEmail.error = "Digite seu e-mail!"
@@ -47,6 +47,20 @@ class Projeto_2_Sozinho : AppCompatActivity() {
                 textResultPhone.text = numPhone.text.toString()
                 // Mostrar o Toast somente quando ambos os campos forem válidos
                 Toast.makeText(this, "Atualizado com sucesso!", Toast.LENGTH_SHORT).show()
+            }
+
+             */
+            when {
+                toEmail.isBlank() -> textEmail.error = "Digite seu e-mail!"
+                !Patterns.EMAIL_ADDRESS.matcher(toEmail).matches() -> textEmail.error = "E-mail inválido!"
+                toPhone.isBlank() -> numPhone.error = "Digite seu número"
+                !isValidPhoneNumber(toPhone) -> numPhone.error = "Número inválido!"
+                else -> {
+                    textResult.text = textEmail.text.toString()
+                    textResultPhone.text = numPhone.text.toString()
+                    Toast.makeText(this, "Atualizado com sucesso!", Toast.LENGTH_SHORT).show()
+                }
+
             }
         }
 
