@@ -1,6 +1,6 @@
 // Operadores relacionais, exemplos:
 /*
-fun main() {
+fun com.raaisilvaa.appone.main() {
     var igual: Boolean = 11 == 10 // Igual a
     var diferente: Boolean = 11 != 11 // Diferente
     var maiorque: Boolean = 80 > 50 // Maior que
@@ -9,7 +9,7 @@ fun main() {
     var menorouigual: Boolean = 200 <= 100 // Menor ou igual
 }
 
-fun main() {
+fun com.raaisilvaa.appone.main() {
     val compras = 300
     val resultado = compras >= 300
     println(resultado)
@@ -21,7 +21,7 @@ fun main() {
 * Compras >= 300 OU idade >= 50
 * &&: E  ||: OU
 
-fun main() {
+fun com.raaisilvaa.appone.main() {
     val compras = 200
     val idade = 50
     val resultado = compras >= 200 && idade >= 50
@@ -29,7 +29,7 @@ fun main() {
 }
 */
 /*
-fun main() {
+fun com.raaisilvaa.appone.main() {
     val maiorIdade = 18
 
     if (maiorIdade >= 18) {
@@ -41,7 +41,7 @@ fun main() {
 }
 */
 /*
-fun main() {
+fun com.raaisilvaa.appone.main() {
     val desconto = 900
     val idade = 18
 
@@ -54,7 +54,7 @@ fun main() {
 */
 // Condições para ver se o número é maior ou menos ou igual.
 /*
-fun main() {
+fun com.raaisilvaa.appone.main() {
     val numero1 = 10
     val numero2 = 20
 
@@ -68,7 +68,7 @@ fun main() {
 }
 */
 /*
-fun main() {
+fun com.raaisilvaa.appone.main() {
     val idade = 18
     val texto = if (idade >= 18) "Maior idade" else "Menor idade"
 
