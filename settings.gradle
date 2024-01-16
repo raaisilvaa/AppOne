@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "AppOne"
 include ':app'
+include ':curso_kotlin_jamilton'
