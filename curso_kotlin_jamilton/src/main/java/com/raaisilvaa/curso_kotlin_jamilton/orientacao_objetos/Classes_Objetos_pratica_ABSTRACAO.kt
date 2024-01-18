@@ -4,42 +4,40 @@ Pilar 01 - Abstração
 * Modelo (classes)
 * Entidade (pessoas ou coisas imprescindiveis)
 * Identidade
-* Características (atributos)
+* Características (atributos): variável
 * Ações (métodos)
 */
 
-class Jogador { // Modelo (utilizar UpperCamelCase, ex: JogadorCaro, JogadorRaiSilva.)
+class JogadoresTitular { // Modelo (utilizar UpperCamelCase, ex: JogadorCaro, JogadorRaiSilva.)
     // Atributos (utilizam Lower Case Case. ex: kartMario, pneuLiso.)
     var kart = ""
     var pneu = ""
     var planador = ""
 
     fun acelerar() { // Métodos(ações) || São feitas pelo seu jogador nesse código.
-        println("Acelerar: $pneu")
+        println("Kart: $kart, Pneu: $pneu, Planaldor: $planador")
     }
 }
 
 fun main() {
     // Criar instância de um objeto.
-    val rai = Jogador()
-    rai.kart = "Normal"
-    rai.pneu = "Standard"
-    rai.planador = "Paraquedas"
+    val jogador1 = JogadoresTitular()
+    jogador1.kart = "Normal"
+    jogador1.pneu = "Standard"
+    jogador1.planador = "Paraquedas"
 
-    rai.acelerar()
-
-    val jogador1 = "Raí"
+    jogador1.acelerar()
 
 
 
-    val computador = Jogador()
+
+    val computador = JogadoresTitular()
     computador.kart = "Race"
     computador.pneu = "Glider"
     computador.planador = "Avião"
 
     computador.acelerar()
 
-    val jogador2 = "Computador"
 
 }
 
