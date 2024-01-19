@@ -9,7 +9,7 @@ class FuncionarioBanco(double: Double) {
     // Método
     fun calcularSalarioDesconto(bonus: Int): Double {
 
-        return salario - 20
+        return salario - 20 + bonus
 
        /* println("$salarioComDesconto")*/
     }
