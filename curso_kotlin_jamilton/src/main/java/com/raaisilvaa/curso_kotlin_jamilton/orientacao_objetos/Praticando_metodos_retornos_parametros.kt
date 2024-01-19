@@ -1,7 +1,7 @@
 package com.raaisilvaa.curso_kotlin_jamilton.orientacao_objetos
 
 // Metodos com retorno
-/*
+
 class AllFibra(double: Double) {
     var salarioMensal: Double = double
 
@@ -10,7 +10,7 @@ class AllFibra(double: Double) {
     }
 }
 
-fun main() {
+fun main1() {
     val salario = 2500.25
     val funcionarioCigano = AllFibra(salario)
     val bonus = 60
@@ -19,7 +19,7 @@ fun main() {
 
     println(total)
 }
-*/
+
 
 
 
@@ -42,7 +42,7 @@ class CorteRafaelBarbeiro(valorCorte: Int, valorBarba: Int) {
     }
 }
 
-fun main() {
+fun main2() {
     val valorCorte = 45
     val valorBarba = 35
     val descontoCorte = 5
@@ -54,4 +54,34 @@ fun main() {
     val comboDesconto = combo.somaCorteBarbearia(descontoCorte)
 
     println(comboDesconto)
+}
+// Criando uma classe e armazenando o var.
+//
+class DistribuidoraDeOvos(precoCartela: Int, precoUnitario: Int) {
+    var precoCartelaOvos: Int = precoCartela
+    var precoUnitarioOvos: Int = precoUnitario
+
+    // Função para a nossa ação para efetuar o calculo e retorno dessa mesma função.
+    fun calculoDesconto(descontoOvos: Int): Int {
+        val quantidadeCartelaOvos = 1
+
+        return if ( quantidadeCartelaOvos <= 2) {
+            precoCartelaOvos * quantidadeCartelaOvos
+        } else {
+            (precoCartelaOvos * quantidadeCartelaOvos) - descontoOvos
+        }
+
+    }
+}
+
+fun main() {
+    val precoCartela = 20
+    val precoUnitario = 2
+    val descontoOvos = 3
+
+    val compras = DistribuidoraDeOvos(precoCartela, precoUnitario)
+
+    val somaTotal = compras.calculoDesconto(descontoOvos)
+
+    println(somaTotal)
 }
