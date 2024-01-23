@@ -9,6 +9,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppOne">
         <activity
+            android:name=".orientacao_objetos.AplicativoFrases"
+            android:exported="true" />
+        <activity
             android:name=".orientacao_objetos.MainActivity"
             android:exported="true">
             <intent-filter>
