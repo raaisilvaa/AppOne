@@ -38,7 +38,7 @@ class MainActivity2 : AppCompatActivity() {
                 digiteName.error = "Invalid name"
             } else if (numberDigite.isBlank()) {
                 digiteNumber.error = "Enter your number"
-            }  else if (!isValidPhoneNumber(numberDigite)){
+            } else if (!isValidPhoneNumber(numberDigite)) {
                 digiteNumber.error = "Invalid number"
             } else {
                 textNome.text = digiteName.text.toString()
