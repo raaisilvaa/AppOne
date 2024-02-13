@@ -48,7 +48,7 @@ fun main() {
 
 }
 */
-
+/*
 fun verificarParImpar(numero: Int) {
     if (numero % 2 == 0) {
         println("$numero é um número par.")
@@ -63,4 +63,12 @@ fun main() {
 
     verificarParImpar(numero1)
     verificarParImpar(numero2)
+}
+*/
+
+
+fun main() {
+    val number2word = mapOf(1 to "one", 2 to "two", 3 to "three")
+    val n = 1
+    println("$n is spelt as '${number2word[n]}'")
 }
